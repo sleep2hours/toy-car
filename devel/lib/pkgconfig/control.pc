@@ -1,0 +1,8 @@
+prefix=/home/lym/code/toy-car/devel
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I/home/lym/code/toy-car/src/control/include
+Libs: -L${prefix}/lib -limage_tr
+Requires: 

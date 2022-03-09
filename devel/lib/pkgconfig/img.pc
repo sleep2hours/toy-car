@@ -1,0 +1,8 @@
+prefix=/home/lym/code/toy-car/devel
+
+Name: img
+Description: Description of img
+Version: 0.0.0
+Cflags: -I/home/lym/code/toy-car/src/img/include
+Libs: -L${prefix}/lib -limage_tr
+Requires: 
