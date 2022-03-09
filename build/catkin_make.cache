@@ -1,2 +1,0 @@
-control:img
--DCATKIN_DEVEL_PREFIX=/home/lym/code/toy-car/devel -DCMAKE_INSTALL_PREFIX=/home/lym/code/toy-car/install -G Unix Makefiles
