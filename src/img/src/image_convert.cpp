@@ -11,19 +11,21 @@ void imageCv(sensor_msgs::CompressedImage::ConstPtr msg)
 
     // if (cv_ptr->image.rows > 60 && cv_ptr->image.cols > 60)
     //     cv::circle(cv_ptr->image, cv::Point(50, 50), 5, cv::Scalar(0, 0, 255), -1);
-    cv::Mat image = cv::imdecode(cv::Mat(msg->data),1);//convert compressed image data to cv::Mat
-    cv::imshow("show",image);
+    cv::Mat image = cv::imdecode(cv::Mat(msg->data), 1); //convert compressed image data to cv::Mat
+    cv::add(image, image,image);
+    cv::imshow("show", image);
 
     // cv::imshow("show", cv_ptr->image);
     cv::waitKey(1);
 }
 int main(int argc, char **argv)
 {
+
     ros::init(argc, argv, "image_converter");
     ros::NodeHandle nh;
     // image_transport::ImageTransport it(nh);
     // image_transport::Subscriber img_sub = it.subscribe("/camera/cv", 1, imageCv);
-    ros::Subscriber sub=nh.subscribe("/camera/compressed",1,imageCv);
+    ros::Subscriber sub = nh.subscribe("/camera/compressed", 1, imageCv);
     ros::spin();
     return 0;
 }

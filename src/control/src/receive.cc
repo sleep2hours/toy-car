@@ -8,7 +8,7 @@ void carCtrl(std_msgs::Int16::ConstPtr msg)
     uint8_t buffer[1];
     buffer[0]=msg->data;
     int num=ser.write(buffer,1);
-    ROS_INFO("Sent comm to serial port. %lu bits.", num);
+    printf("msg:%i\n", msg->data);
 }
 int serialOK(char *output)
 {

@@ -32,7 +32,7 @@ struct CameraParam
     const int b_balance = 1458;
     const float Gain = 15;                      //Set gain value
     const float Exposure_Time = 1800;           //Period of exposure
-    const GAIN_MODE Gain_Mode = CONTINUOUS;     //Gain mode
+    const GAIN_MODE Gain_Mode = NONE;     //Gain mode
 };
 
 #endif //_CAMERA_PARAM_CC

@@ -18,8 +18,8 @@ namespace hpg
         grab_mode = mode;
         balance_r = 3600;
         balance_b = 1997;
-        exp_short = 1000;
-        exp_long = 1000;
+        exp_short = 4000;
+        exp_long = 4000;
         next_pos = 1;
         last_pos = NULL_POS;
         grab = true;

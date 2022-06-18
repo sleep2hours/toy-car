@@ -8,7 +8,7 @@
 
 class KeyCtrl {
 public:
-    KeyCtrl(std::string dev_name, std::atomic_char& stat);
+    KeyCtrl(std::string dev_name, int& stat);
     ~KeyCtrl();
 
     void onKeyThread();
@@ -23,6 +23,6 @@ private:
         handler(9);
     }
 private:
-    std::atomic_char& status;
+    int& status;
     int fd;
 };

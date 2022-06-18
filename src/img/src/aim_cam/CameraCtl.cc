@@ -97,7 +97,7 @@ namespace cm
         }
 
         //设置曝光时间
-        nRet = MV_CC_SetExposureTime(handle, Default_Param.Exposure_Time);
+        nRet = MV_CC_SetExposureTime(handle, 5000);
         if (MV_OK != nRet)
         {
             printf("MV_CC_SetExposureTime failed! nRet [%x]\n", nRet);
@@ -113,14 +113,14 @@ namespace cm
         //}
 
         //设置增益固定值
-        nRet = MV_CC_SetGain(handle, Default_Param.Gain);
+        nRet = MV_CC_SetGain(handle, 20);
         if (MV_OK != nRet)
         {
             printf("MV_CC_SetGain failed! nRet [%x]\n", nRet);
             return;
         }
         //设置图像格式
-        nRet = MV_CC_SetEnumValue(handle, "PixelFormat",  PixelType_Gvsp_BayerRG8);
+        nRet = MV_CC_SetEnumValue(handle, "PixelFormat",  PixelType_Gvsp_YUV411_Packed);
         if (MV_OK != nRet)
         {
             printf("MV_CC_SetPixelFormat failed! nRet [%x]\n", nRet);
